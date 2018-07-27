@@ -1,27 +1,30 @@
 
 <ul>
-{{#each model as |monster|}}
+	{{#each model as |monster|}}
 
 <li>
-{{monster.name}} section {{monster.level}}
+	{{monster.name}} section {{monster.level}}
 
 <br>
 
-<button {{action 'toggleActive' monster}}>toggle active</button>
+	<button {{action 'toggleActive' monster}}>toggle active</button>
+	<button {{action 'del' monster}}>remove</button>
+
+
 
 <br>
- 
+
 
 </li>
 
 
 
-Active: {{monster.active}}
-{{/each}}
+	Active: {{monster.active}}
+	{{/each}}
 <br>
-{{input value=newtest placeholder="create"}}
-{{input value=newsect placeholder="section"}}
+	{{input value=newtest placeholder="create"}}
+	{{input value=newsect placeholder="section"}}
 
 
-<button {{action 'createm' monster}}> test </button>
+	<button {{action 'createm' monster}}> test </button>
 </ul>
