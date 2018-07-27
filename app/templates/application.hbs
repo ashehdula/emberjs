@@ -1,5 +1,27 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
 
-{{outlet}}
+<ul>
+{{#each model as |monster|}}
+
+<li>
+{{monster.name}} section {{monster.level}}
+
+<br>
+
+<button {{action 'toggleActive' monster}}>toggle active</button>
+
+<br>
+ 
+
+</li>
+
+
+
+Active: {{monster.active}}
+{{/each}}
+<br>
+{{input value=newtest placeholder="create"}}
+{{input value=newsect placeholder="section"}}
+
+
+<button {{action 'createm' monster}}> test </button>
+</ul>
