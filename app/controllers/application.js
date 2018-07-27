@@ -18,11 +18,8 @@ createm(){
 
 
 });
-		console.log(monster);
+		
 		monster.save();
-		console.log(newm);
-		console.log(news);
-		console.log("test");
 		location.reload();
 
 },
