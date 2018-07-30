@@ -2,15 +2,29 @@
 <ul>
 	{{#each model as |monster|}}
 
+
+
 <li>
-	{{monster.name}} section {{monster.level}}
+
+
+
+
+	{{monster.name}} 
+
+
+
+
+	section {{monster.level}}
 
 <br>
 
 	<button {{action 'toggleActive' monster}}>toggle active</button>
 	<button {{action 'del' monster}}>remove</button>
 
-
+{{#link-to 'monster' monster.id tagName ='button'}}
+	view
+	{{/link-to}}
+    
 
 <br>
 
